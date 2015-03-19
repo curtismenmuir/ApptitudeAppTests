@@ -7,13 +7,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.Assert;
 
-
-
 import com.aptitudeguru.dashboard.TestPage;
 
-public class TestPageTests extends TestCase{
+public class TestDistanceSign extends TestCase{
 
-	public TestPageTests() {
+	public TestDistanceSign(){
 	}
 
 	@Before
@@ -25,49 +23,52 @@ public class TestPageTests extends TestCase{
 	}
 
 	@Test
-	public void testFrench() 
+	public void testFrenchDistanceSign() 
 	{
 		TestPage test = new TestPage();
-		String testVar = "rupee";
+		String testVar = "kmph";
 		String localeSign = "€";
 		String localeCurrency = "euro";
-		String localeDistance = "km";
-		String localeDistancelong = "kmph";
+		String localeDistancelong = "km";
+		String localeDistance = "kmph";
 		String result = test.getLocaleCurrency(testVar, localeSign, localeCurrency, localeDistance, localeDistancelong);
-		assertTrue(localeCurrency.equals(result));
+		assertTrue(localeDistance.equals(result));
 	}
-	public void testAmerican()
+	@Test
+	public void testAmericanDistanceSign()
 	{
 		TestPage test = new TestPage();
-		String testVar = "rupee";
+		String testVar = "kmph";
 		String localeSign = "$";
 		String localeCurrency = "dollar";
-		String localeDistance = "miles";
-		String localeDistancelong = "mph";
+		String localeDistancelong = "miles";
+		String localeDistance = "mph";
 		String result = test.getLocaleCurrency(testVar, localeSign, localeCurrency, localeDistance, localeDistancelong);
-		assertTrue(localeCurrency.equals(result));
+		assertTrue(localeDistance.equals(result));
 	}
-	
-	public void testBritish()
+	@Test
+	public void testBritishDistanceSign()
 	{
 		TestPage test = new TestPage();
-		String testVar = "rupee";
+		String testVar = "kmph";
 		String localeSign = "£";
 		String localeCurrency = "pound";
-		String localeDistance = "miles";
-		String localeDistancelong = "mph";
+		String localeDistancelong = "miles";
+		String localeDistance = "mph";
 		String result = test.getLocaleCurrency(testVar, localeSign, localeCurrency, localeDistance, localeDistancelong);
-		assertTrue(localeCurrency.equals(result));
+		assertTrue(localeDistance.equals(result));
 	}
-	public void testHindi()
+	@Test
+	public void testHindiDistanceSign()
 	{
 		TestPage test = new TestPage();
-		String testVar = "rupee";
+		String testVar = "kmph";
 		String localeSign = "rupee";
 		String localeCurrency = "Rs";
-		String localeDistance = "km";
-		String localeDistancelong = "kmph";
+		String localeDistancelong = "km";
+		String localeDistance = "kmph";
 		String result = test.getLocaleCurrency(testVar, localeSign, localeCurrency, localeDistance, localeDistancelong);
-		assertTrue(localeCurrency.equals(result));
+		assertTrue(localeDistance.equals(result));
 	}
+
 }

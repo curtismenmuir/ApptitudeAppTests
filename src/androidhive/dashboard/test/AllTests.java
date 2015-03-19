@@ -7,7 +7,9 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 
 @SuiteClasses({ 
-	TestPageTests.class})
+	TestCurrency.class, TestDistance.class, TestDistanceSign.class, TestCurrencySign.class
+	})
 public class AllTests {
 
 }
+
